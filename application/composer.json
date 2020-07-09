@@ -1,0 +1,8 @@
+{
+    "name": "joaorodriguesjr/modernphp",
+    "description": "A small php project using modern development tools",
+    "type": "project",
+    "autoload": {"psr-4": {}},
+    "require": {},
+    "require-dev": {}
+}
