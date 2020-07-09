@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  runtime:
+    image: modernphp_runtime:latest
+    build:
+      context: .
+      dockerfile: docker/runtime/development.dockerfile
+      target: development
+    volumes:
+      - ./application:/var/www
+    environment:
+      - TZ=America/Sao_Paulo
+
+  webserver:
+    image: modernphp_webserver:latest
+    build:
+      context: .
+      dockerfile: docker/webserver/development.dockerfile
+      target: development
+    depends_on:
+      - runtime
+    ports:
+      - 8081:80
+    volumes:
+      - ./application:/var/www
+      - ./docker/webserver/default.conf:/etc/nginx/conf.d/default.conf
+    environment:
+      - TZ=America/Sao_Paulo
