@@ -4,8 +4,8 @@ namespace PlaceHolder;
 
 class Calculation
 {
-    public function sum(int $a, int $b): int
+    public function sum(int $numberOne, int $numberTwo): int
     {
-        return $a + $b;
+        return $numberOne + $numberTwo;
     }
 }
