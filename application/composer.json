@@ -2,7 +2,9 @@
     "name": "joaorodriguesjr/modernphp",
     "description": "A small php project using modern development tools",
     "type": "project",
-    "autoload": {"psr-4": {}},
+    "autoload": {"psr-4": {"PlaceHolder\\": "src/PlaceHolder"}},
     "require": {},
-    "require-dev": {}
+    "require-dev": {
+        "phpunit/phpunit": "9.2.5"
+    }
 }
